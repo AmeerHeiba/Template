@@ -11,13 +11,13 @@ function newQuote(){
     loading();
 
     const quote = apiQuotes [Math.floor(Math.random()*apiQuotes.length)];
-    
+
 
     if (!quote.author)
     {
         authorText.textContent = 'Unkowen';
     } else{
-        authorText.textContent = quote.author;
+        authorText.textContent = quote.author.replace(" type.fit", "");
     }
 
     if (quote.text.length > 50)
